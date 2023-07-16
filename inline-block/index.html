@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline block</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <ul class="header-menu">
+                <li>
+                    <a class="cursor p-top-20 p-bot-20" href="../main page/index.html">
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#home"></use>
+                        </svg>
+                        HOME PAGE
+                    </a>
+                </li>
+                <li>
+                    <a class="cursor p-top-20 p-bot-20" href="../index.html">
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#gallery"></use>
+                        </svg>
+                        GALLERY
+                    </a>
+                </li>
+                <li>
+                    <a class="cursor p-top-20 p-bot-20" href="#">
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#d-arrow"></use>
+                        </svg>
+                        HOMEWORK
+                    </a>
+                    <ul class="second-menu">
+                        <li><a href="index.html">INLINE BLOCK</a></li>
+                        <li><a href="../float/index.html">FLOAT</a></li>
+                        <li>
+                            <a href="#">
+                                <svg class="l-arrow-icon">
+                                    <use href="../img/sprite.svg#l-arrow"></use>
+                                </svg>
+                                BLOCKS
+                            </a>
+                            <ul class="third-menu">
+                                <li><a href="../flex/index.html">FLEX</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box">
+
+        <div class="fs-0 bg-orange">
+            <div class="w-400 h-400 d-inline-block outline fs-20">1</div>
+            <div class="w-400 h-400 d-inline-block outline fs-20">2</div>
+            <div class="w-400 h-400 d-inline-block outline fs-20">3</div>
+        </div>
+
+        <div class="fs-0 bg-yellow">
+            <div class="d-inline-block w-800 fs-20">
+                <div class="h-200 outline ">4</div>
+                <div class="h-200 outline ">5</div>
+            </div>
+            <div class="d-inline-block w-400 fs-20">
+                <div class="h-133 outline">6</div>
+                <div class="h-133 outline">7</div>
+                <div class="h-133 outline">8</div>
+            </div>
+        </div>
+
+        <div class="fs-0 bg-green">
+            <div class="d-inline-block fs-20 w-400 h-400 outline">9</div>
+            <div class="d-inline-block fs-20 w-800">
+                <div class="h-200 outline">10</div>
+                <div class="fs-0">
+                    <div class="h-200 outline d-inline-block fs-20 w-400">11</div>
+                    <div class="d-inline-block fs-20 w-400">
+                        <div class="h-100 outline">12</div>
+                        <div class="h-100 outline">13</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

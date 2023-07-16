@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* --------------------------------------------------------------------- */
+
+
+@font-face {
+    font-family: Agdasima;
+    src: url('../fonts/Agdasima-Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Belanosima;
+    src: url('../fonts/Belanosima-Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Lora;
+    src: url('../fonts/Lora-Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+
+body {
+    display: flex;
+    position: relative;
+}
+
+.left-menu {
+    width: 80px;
+    background-color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding-top: 80px;
+    transition: width .4s linear;
+    z-index: 2;
+}
+
+.global-container {
+    padding-left: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(4, 4, 49);
+    transition: padding .4s linear;
+}
+
+.left-menu:hover{
+    width: 350px;
+}
+
+.left-menu:hover + .global-container{
+    padding: 350px;
+}
+
+.left-menu ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 15px auto;
+    gap: 20px;
+}
+
+.left-menu ul li{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    white-space: nowrap;
+    color: rgb(4, 4, 49);
+    text-align: center;
+    position: relative;
+}
+
+.left-menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 30px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.left-menu-icon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    outline: 2px solid black;
+    rotate: -45deg;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.left-menu-icon svg{
+    width: 35px;
+    height: 35px;
+    rotate: 45deg;
+    transition: transform .2s ease;
+}
+
+.left-menu ul li:hover {
+    background-color: rgb(4, 4, 49);
+    color: aliceblue;
+}
+
+.left-menu ul li:hover  .left-menu-icon svg{
+    transform: scaleX(1.3) scaleY(1.3);
+}
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    fill: none;
+}
+
+.l-arrow-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.header {
+    background: rgb(153, 109, 179);
+    padding: 20px 0;
+    
+}
+
+.header-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px auto;
+    gap: 20px;
+}
+
+.header-menu li {
+    font-family: Agdasima;
+    font-size: 30px;
+    outline: 2px solid rgb(4, 4, 49);
+    color: rgb(4, 4, 49);
+    text-align: center;
+    position: relative;
+}
+
+.header-menu li a {
+    display: block;
+    padding: 5px 5px;
+    text-decoration: none;
+}
+
+.header-menu li:hover .second-menu{
+    top: 100%;
+}
+
+.second-menu {
+    transition: top 1s linear;
+    position: absolute;
+    top: -1000%;
+    right: 0;
+    z-index: 3;
+}
+
+.second-menu li {
+    text-align: center;
+    font-family: Belanosima;
+    background: rgb(153, 109, 179);
+    margin-top: 10px;
+}
+
+.second-menu a {
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.third-menu {
+    transition: opacity 1s ease;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    right: 100%;
+padding-right: 20px;
+overflow: hidden;}
+
+.third-menu li {
+    margin-top: 0px;
+    font-family: Lora;
+}
+
+.second-menu li:hover .third-menu{
+    opacity: 1;
+    overflow: visible;
+}
+
+.planets-cont {
+    outline: 2px solid rgb(153, 109, 179);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img {
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+    background: rgb(153, 109, 179);
+    position: relative;
+}
+
+.planets-cont {
+    margin: 20px 0;
+}
+
+.mercury:hover::after {
+    content: 'Мерку́рий — наименьшая планета Солнечной системы и самая близкая к Солнцу. Названа в честь древнеримского бога торговли — быстрого Меркурия, поскольку она движется по небу быстрее других планет.';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -80px;
+    min-height: 100px;
+    padding: 30px;
+    font-size: 20px;
+    background: rgb(153, 109, 179, 0.6);
+    color: rgb(4, 4, 49);
+    text-align: center;
+}
+
+.venus:hover::after {
+    content: 'Вене́ра — вторая по удалённости от Солнца и шестая по размеру планета Солнечной системы, наряду с Меркурием, Землёй и Марсом принадлежащая к семейству планет земной группы.';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -80px;
+    min-height: 100px;
+    padding: 30px;
+    font-size: 20px;
+    background: rgb(153, 109, 179, 0.6);
+    color: rgb(4, 4, 49);
+    text-align: center;
+}
+
+.earth:hover::after {
+    content: 'Земля́ — третья по удалённости от Солнца планета Солнечной системы. Самая плотная, пятая по диаметру и массе среди всех планет Солнечной системы и крупнейшая среди планет земной группы, в которую входят также Меркурий, Венера и Марс.';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -80px;
+    min-height: 100px;
+    padding: 30px;
+    font-size: 20px;
+    background: rgb(153, 109, 179, 0.6);
+    color: rgb(4, 4, 49);
+    text-align: center;
+}
+
+.mars:hover::after {
+    content: 'Марс — четвёртая по удалённости от Солнца и седьмая по размеру планета Солнечной системы; масса планеты составляет 10,7 % массы Земли. Названа в честь Марса — древнеримского бога войны, соответствующего древнегреческому Аресу.';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -80px;
+    min-height: 100px;
+    padding: 30px;
+    font-size: 20px;
+    background: rgb(153, 109, 179, 0.6);
+    color: rgb(4, 4, 49);
+    text-align: center;
+}
+
+.jupiter:hover::after {
+    content: 'Юпи́тер — крупнейшая планета Солнечной системы, пятая по удалённости от Солнца. Наряду с Сатурном Юпитер классифицируется как газовый гигант.Перейти к разделу «Юпитер среди планет Солнечной системы. Планета была известна людям с глубокой древности, что нашло своё отражение в мифологии и религиозных верованиях различных культур.';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -90px;
+    min-height: 100px;
+    padding: 30px;
+    font-size: 20px;
+    background: rgb(153, 109, 179, 0.6);
+    color: rgb(4, 4, 49);
+    text-align: center;
+}
+
+.saturn:hover::after {
+    content: 'Сату́рн — шестая планета по удалённости от Солнца и вторая по размерам планета в Солнечной системе после Юпитера. Сатурн классифицируется как газовая планета-гигант.';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -80px;
+    min-height: 100px;
+    padding: 30px;
+    font-size: 20px;
+    background: rgb(153, 109, 179, 0.6);
+    color: rgb(4, 4, 49);
+    text-align: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.p-button {
+    padding: 20px 10px;
+}
+
+.links-box {
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-link {
+    width: 100px;
+    height: 100px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.p-button {
+    padding: 20px 10px;
+}
+
+.bg-orange {
+    background: orange;
+}
+
+.bg-yellow {
+    background: yellow;
+}
+
+.bg-green {
+    background: green;
+}
+
+.box {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.outline {
+    outline: 2px solid red;
+}
+
+.fs-0 {
+    font-size: 0;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.w-400 {
+    width: 400px;
+}
+
+.w-800 {
+    width: 800px;
+}
+
+.h-133 {
+    height: 133.33px;
+}
+
+.h-200 {
+    height: 200px;
+}
+
+.h-100 {
+    height: 100px;
+}
+
+.h-400 {
+    height: 400px;
+}
+
+
+.float-l {
+    float: left;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.hover:hover {
+    background: rgb(209, 209, 209);
+}
+
+.display-flex {
+    display: flex;
+}

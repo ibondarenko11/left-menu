@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floats</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <ul class="header-menu">
+                <li>
+                    <a class="cursor p-top-20 p-bot-20" href="../main page/index.html">
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#home"></use>
+                        </svg>
+                        HOME PAGE
+                    </a>
+                </li>
+                <li>
+                    <a class="cursor p-top-20 p-bot-20" href="../index.html">
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#gallery"></use>
+                        </svg>
+                        GALLERY
+                    </a>
+                </li>
+                <li>
+                    <a class="cursor p-top-20 p-bot-20" href="#">
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#d-arrow"></use>
+                        </svg>
+                        HOMEWORK
+                    </a>
+                    <ul class="second-menu">
+                        <li><a href="../inline-block/index.html">INLINE BLOCK</a></li>
+                        <li><a href="index.html">FLOAT</a></li>
+                        <li>
+                            <a href="#">
+                                <svg class="l-arrow-icon">
+                                    <use href="../img/sprite.svg#l-arrow"></use>
+                                </svg>
+                                BLOCKS
+                            </a>
+                            <ul class="third-menu">
+                                <li><a href="../flex/index.html">FLEX</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box">
+    
+        <div class="clearfix bg-orange ">
+            <div class="w-400 h-400 outline float-l hover">1</div>
+            <div class="w-400 h-400 outline float-l hover">2</div>
+            <div class="w-400 h-400 outline float-l hover">3</div>
+        </div>
+        
+        <div class="clearfix bg-yellow ">
+            <div class="w-800 float-l">
+                <div class="h-200 outline hover">4</div>
+                <div class="h-200 outline hover">5</div>
+            </div>
+            <div class="w-400 float-l h-400">
+                <div class="h-133 outline hover">6</div>
+                <div class="h-133 outline hover">7</div>
+                <div class="h-133 outline hover">8</div>
+            </div>
+        </div>
+        
+        <div class="clearfix bg-green">
+            <div class="w-400 h-400 outline float-l hover">9</div>
+            <div class="w-800 float-l">
+                <div class="h-200 outline hover">10</div>
+                <div>
+                    <div class="h-200 outline w-400 float-l hover">11</div>
+                    <div class="w-400 float-l">
+                        <div class="h-100 outline hover">12</div>
+                        <div class="h-100 outline hover">13</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
