@@ -211,6 +211,8 @@ body {
     top: 50%;
     left: 0;
     transform: translateX(-100%) translateY(-50%);
+    background-color: aqua; 
+    border-radius: 10% 0 0 10%;
 }
 
 .menu ul {
@@ -225,7 +227,7 @@ body {
 }
 
 .right-menu:hover .anim-gear {
-    animation: none;
+    animation-play-state: paused;
 }
 
 .right-menu:hover{
