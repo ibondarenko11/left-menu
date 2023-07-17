@@ -74,6 +74,7 @@ table {
 body {
     display: flex;
     position: relative;
+    background-color:rgb(4, 4, 49) ;
 }
 
 .left-menu {
@@ -96,6 +97,13 @@ body {
     flex-direction: column;
     background: rgb(4, 4, 49);
     transition: padding .4s linear;
+}
+
+.gl-container {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(4, 4, 49);
 }
 
 .left-menu:hover{
