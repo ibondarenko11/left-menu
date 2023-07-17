@@ -77,6 +77,12 @@ body {
     background-color:rgb(4, 4, 49) ;
 }
 
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    transition: width .4s linear;
+}
+
 .left-menu {
     width: 80px;
     background-color: aliceblue;
@@ -112,6 +118,10 @@ body {
 
 .left-menu:hover + .global-container{
     padding: 350px;
+}
+
+.left-menu:hover + .container{
+    width: 910px;
 }
 
 .left-menu ul {
@@ -165,12 +175,6 @@ body {
 
 .left-menu ul li:hover  .left-menu-icon svg{
     transform: scaleX(1.3) scaleY(1.3);
-}
-
-
-.container {
-    width: 1200px;
-    margin: 0 auto;
 }
 
 .icon {
